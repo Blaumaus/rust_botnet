@@ -33,11 +33,9 @@ Botnet uses next syntax - `command{split}value` or `command{split}value{sep}valu
 * `exit{split}` - close botnet's executive file
 
 ## Help
- 
 If you need any help at all, feel free to post a issue.
  
 ## Contributing
- 
 Contributing is encouraged and will help make a better program. Please refer to [this](https://gist.github.com/MarcDiethelm/7303312) before contributing.
 
 ## Disclaimer
@@ -46,3 +44,5 @@ I am not responsible for anything you do with it.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Ookldev/rust_botnet/blob/master/LICENSE) file for details
+
+P.S. Better use i686-pc-windows-msvc to compile it.
