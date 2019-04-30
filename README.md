@@ -5,6 +5,7 @@ Example botnet client which uses Telegra.ph as C&C server.
 * DoS attack module.
 * Loader & Executer of any files.
 * Update module.
+* Program adds itself to autoload register and moves to hidden folder in C:/ drive root.
 
 Notice, that this is not production ready version. 
 There are many bugs which are waiting to fix.
@@ -24,4 +25,4 @@ This program must be used for legal purposes!
 I am not responsible for anything you do with it.
 
 ## License
-[License](https://github.com/Ookldev/rust_botnet/blob/master/LICENSE)
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Ookldev/rust_botnet/blob/master/LICENSE) file for details
