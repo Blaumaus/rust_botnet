@@ -24,4 +24,4 @@ This program must be used for legal purposes!
 I am not responsible for anything you do with it.
 
 ## License
-[License](https://github.com/Ookldev/rust_botnet/license)
+[License](https://github.com/Ookldev/rust_botnet/blob/master/LICENSE)
