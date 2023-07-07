@@ -1,5 +1,5 @@
 # Rust Botnet
-Example botnet client which uses Telegra.ph as a C&C server.
+An example botnet client which uses [Telegra.ph](https://telegra.ph) as a C&C server.
 
 ## Features
 * DoS attack feature.
@@ -22,15 +22,9 @@ Botnet uses the next syntax - `command{split}value` or `command{split}value{sep}
 * `delete_botnet{split}` - delete the botnet and it's registry notes from the client's PC.
 * `exit{split}` - close botnet's executable file.
 
-## Help
-If you need any help at all, feel free to post a issue.
- 
-## Contributing
-Contributing is encouraged and will help make a better program. Please refer to [this](https://github.com/MarcDiethelm/contributing/blob/master/README.md) before contributing.
-
 ## Disclaimer
 This program must be used for educational purposes only!
-I am not responsible for anything you do with it.
+Only **you** are responsible for anything **you** do with it!
 
 ## Licence
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Ookldev/rust_botnet/blob/master/LICENSE) file for details.
